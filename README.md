@@ -1,4 +1,4 @@
-# dialogs
+# Dialogs
 Dialogs for web and mobile
 
 ## Dependency
