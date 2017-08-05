@@ -1,6 +1,6 @@
+var dialog = null, d = null;
 (function() {
-
-	$.dialog = new function() {
+	var dialog_tmp = function() {
 
 		/*Diálogo de espera*/
 		this.waiting = function(m) {
@@ -235,4 +235,5 @@
 		};
 	};
 
+	d = dialog = $.dialog = new dialog_tmp();
 })(jQuery);

@@ -18,14 +18,14 @@ Simple and beautiful.
 #### Methods
 1. Info
 ```
-$.dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
+dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
 	alert('evento ao clicar em fechar');
 });
 ```
 
 2. Confirm
 ```
-$.dialog.confirm({
+dialog.confirm({
 	title: 'Titulo do Alerta',
 	message: 'Corpo do alerta',
 	confirm: {

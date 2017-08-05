@@ -1,12 +1,12 @@
 $(function() {
 	$('[name=info]').click(function() {
-		$.dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
+		dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
 			alert('evento ao clicar em fechar');
 		});
 	});
 
 	$('[name=confirm]').click(function() {
-		$.dialog.confirm({
+		dialog.confirm({
 			title: 'Titulo do Alerta',
 			message: 'Corpo do alerta',
 			confirm: {

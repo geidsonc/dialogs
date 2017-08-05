@@ -11,7 +11,6 @@
 
 .dialog {
 	width: 380px;
-	/*position: absolute;*/
 	position: fixed;
 	z-index: 1001;
 	background-color: #fff;
@@ -73,10 +72,6 @@
 	outline-offset: 0;
 }
 
-.dialog-help .dialog-content {
-	/*position: relative;*/
-}
-
 .dialog-help .dialog-header {
 	top: 0;
 	width: 100%;
@@ -84,7 +79,6 @@
 
 .dialog-help .dialog-body {
 	font-size: 1.0em;
-	/*overflow-y: scroll;*/
 	overflow-y: hidden;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -122,7 +116,6 @@
 @media screen and (max-width: 480px) {
 	.dialog {
 		width: 90%;
-		/*position: absolute;*/
 		position: fixed;
 		z-index: 1010;
 		background-color: #fff;
@@ -148,6 +141,5 @@
 	.dialog .dialog-footer {
 		border-top: 1px solid #eee;
 		padding-top: 0px;
-
 	}
 }
