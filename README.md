@@ -9,13 +9,28 @@ Dialogs for web and mobile
 
 Simple and beautiful.
 
-#### Import
+### Download
+
+1. bower
+```
+bower install geidsonbc/dialogs --save
+```
+
+### Import
+
+Use:
+```
+<script src="{your-url}/dialogs.min.js" charset="utf-8"></script>
+<link rel="stylesheet" href="{your-url}/dialogs.min.css">
+```
+Exemple:
+
 ```
 <script src="https://raw.githubusercontent.com/geidsonbc/dialogs/master/dist/dialogs.min.js" charset="utf-8"></script>
 <link rel="stylesheet" href="https://raw.githubusercontent.com/geidsonbc/dialogs/master/dist/dialogs.min.css">
 ```
 
-#### Methods
+### Methods
 1. Info
 ```
 dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
