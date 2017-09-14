@@ -145,7 +145,12 @@ var dialog = null, d = null;
 		this.menu = function(title, obj, event) {
 
 			var html = '<div class="dialog z-depth-1" hidden>'+
-										'<div class="dialog-header">' + title + '</div>'+
+										'<div class="dialog-header flex">'+
+										'<div class="grow">' + title + '</div>'+
+										'<div class="dialog-close">'+
+										'<img src="/dist/img/close.svg" alt="Close">'+
+										'</div>'+
+										'</div>'+
 										'<div class="dialog-body"><ul class="dialog-menu"></ul></div>'+
 									'</div>';
 			var modal = this.open(html);
@@ -159,6 +164,11 @@ var dialog = null, d = null;
 				});
 			}
 			$(".dialog-menu").append(options);
+
+			$('.dialog-close').on('click', function() {
+				$.dialog.close(modal);
+			});
+
 			if (event) {
 				$('.dialog-menu li').on('click', function(e) {
 					$.dialog.close(modal);

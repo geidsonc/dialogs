@@ -24,6 +24,10 @@
 	border-bottom: 1px solid #e5e5e5;
 }
 
+.dialog .dialog-close {
+	display: inline-flex;
+}
+
 .dialog .dialog-body {
 	padding: 20px 15px;
 	font-size: 1.1em;
@@ -142,4 +146,12 @@
 		border-top: 1px solid #eee;
 		padding-top: 0px;
 	}
+}
+
+/* Flexbox class */
+.flex {
+	display: flex;
+}
+.grow {
+	flex-grow: 1;
 }
