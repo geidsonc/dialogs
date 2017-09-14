@@ -12,28 +12,34 @@ Simple and beautiful.
 ### Download
 
 1. bower
-```
+```sh
 bower install geidsonbc/dialogs --save
 ```
 
 ### Import
 
 Use:
-```
+```html
 <script src="{your-url}/dialogs.min.js" charset="utf-8"></script>
 <link rel="stylesheet" href="{your-url}/dialogs.min.css">
+```
+Example:
+
+```html
+<script src="https://raw.githubusercontent.com/geidsonbc/dialogs/master/dist/dialogs.min.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/geidsonbc/dialogs/master/dist/dialogs.min.css">
 ```
 
 ### Methods
 1. Info
-```
+```js
 dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
 	alert('evento ao clicar em fechar');
 });
 ```
 
 2. Confirm
-```
+```js
 dialog.confirm({
 	title: 'Titulo do Alerta',
 	message: 'Corpo do alerta',
