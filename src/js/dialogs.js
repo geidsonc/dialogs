@@ -145,11 +145,11 @@ var dialog = null, d = null;
 		this.menu = function(title, obj, event) {
 
 			var html = '<div class="dialog z-depth-1" hidden>'+
-										'<div class="dialog-header flex">'+
-										'<div class="grow">' + title + '</div>'+
-										'<div class="dialog-close">'+
-										'<img src="/dist/img/close.svg" alt="Close">'+
-										'</div>'+
+										'<div class="dialog-header">'+
+											'<div class="dialog-header-title">' + title + '</div>'+
+											'<div class="dialog-close">'+
+												'<img src="/dist/img/close.svg" alt="Close">'+
+											'</div>'+
 										'</div>'+
 										'<div class="dialog-body"><ul class="dialog-menu"></ul></div>'+
 									'</div>';
@@ -200,7 +200,7 @@ var dialog = null, d = null;
 			if (this.height <= 480) {
 				$(".dialog").width(this.width - 40);
 			}
-			$(".dialog").show(0);
+			$(".dialog").fadeIn(100);
 			//console.log([$(".dialog").height(), $(".dialog").width()]);
 			var dialogBody = $(".dialog .dialog-body").outerHeight();
 			var dialogHeader = $(".dialog .dialog-header").innerHeight();
@@ -228,19 +228,28 @@ var dialog = null, d = null;
 
 		this.close = function(type) {
 			if ( typeof type == 'object' ) {
-				$(type).remove();
-				if ( !$('.dialog').length ) {
-					$("body").removeClass("noscroll");
-					$(".dialog-overlay").remove();
-				}
+				$(type).fadeOut(100, function() {
+					$(type).remove();
+
+					if ( !$('.dialog').length ) {
+						$("body").removeClass("noscroll");
+
+						$(".dialog-overlay").fadeOut(100, function() {
+							$(this).remove();
+						});
+					}
+
+				});
 			}
 			else if ( type && $('.dialog').not('.dialog-'+type).length ) {
 				$('.dialog-'+type).remove();
 			}
 			else {
 				$("body").removeClass("noscroll");
-				$(".dialog-overlay").remove();
-				$(".dialog").remove();
+				$(".dialog-overlay").fadeOut(100, function() {
+					$(this).remove();
+					$(".dialog").remove();
+				});
 			}
 		};
 	};
