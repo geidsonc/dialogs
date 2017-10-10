@@ -1,5 +1,5 @@
 {
-	"name": "dialogs",
+	"name": "dialogsjs",
 	"description": "Diálogos para web. Alerta, confirmações, aguardando, menu, etc.",
 	"readmeFileName": "README.md",
 	"keywords": [
@@ -12,7 +12,7 @@
 	},
 	"contributors": [
 		{ "name": "Denisson Leal", "email": "denissonleal@gmail.com" },
-		{ "name": "Leandrow", "email": "leandrow01s@gmail.com"}
+		{ "name": "Leandrow", "email": "leandrow01s@gmail.com" }
 	],
 	"scripts": {
 		"prod": "gulp --production",
@@ -23,8 +23,8 @@
 		"url": "https://github.com/geidsonbc/dialogs"
 	},
 	"bugs": {
-		"url": "https://github.com/geidsonbc/dialogs/issues",
-	}
+		"url": "https://github.com/geidsonbc/dialogs/issues"
+	},
 	"devDependencies": {
 		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "^4.0.0",

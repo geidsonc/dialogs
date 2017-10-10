@@ -20,14 +20,14 @@ or
 
 2. npm
 ```sh
-npm install dialogs
+npm install dialogsjs
 ```
 
 or
 
 3. yarn
 ```sh
-yarn add dialogs
+yarn add dialogsjs
 ```
 
 ### Import
