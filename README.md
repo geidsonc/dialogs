@@ -25,7 +25,7 @@ npm install dialogs
 
 or
 
-2. yarn
+3. yarn
 ```sh
 yarn add dialogs
 ```
