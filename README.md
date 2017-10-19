@@ -1,71 +1,84 @@
 # Dialogs
-Dialogs for web and mobile
+> Dialogs for web and mobile
 
-## Dependency
+### Dependency
 
-1. [jQuery](https://jquery.com/download/)
+[jQuery](https://jquery.com/download/)
 
-## Use
+## Usage
 
 Simple and beautiful.
 
-### Download
+### Install
 
-1. bower
+**bower**
 ```sh
 bower install geidsonbc/dialogs --save
 ```
 
-or
-
-2. npm
+**npm**
 ```sh
 npm install dialogsjs
 ```
 
-or
-
-3. yarn
+**yarn**
 ```sh
 yarn add dialogsjs
 ```
 
-### Import
+### Setup
 
-Use:
+Include:
 ```html
 <script src="{your-url}/dialogs.min.js" charset="utf-8"></script>
 <link rel="stylesheet" href="{your-url}/dialogs.min.css">
 ```
 
-### Methods
+## Methods
+1. dialog.waiting('Message');
+2. dialog.confirm('Title', 'Message', function(){ `// confirm` }, function(){ `// cancel` });
+3. dialog.prompt('Title', 'Message', 'Label', 'Selector', function(){ `// done` }, function(){ `// cancel` });
+4. dialog.modal('Title', 'Message', function(){ `...` });
+5. dialog.info('Title', 'Message', function(){ `...` });
+6. dialog.help('Title', 'Message', { class: `...`, func: `...` });
+7. dialog.menu('Title', [{ value: `...`, label: `...` }, `...` ], function(e){ `...` } );
+8. dialog.close('Type');
+
+### Examples
 1. Info
 ```js
-dialog.info('Titulo do diálogo', 'Corpo do diálogo', function() {
-	alert('callback ao clicar em fechar');
+dialog.info('Titulo', 'Corpo', function() {
+	alert('callback');
 });
 ```
 
 2. Confirm
 ```js
 dialog.confirm({
-	title: 'Titulo do diálogo',
-	message: 'Corpo do diálogo',
+	title: 'Titulo',
+	message: 'Corpo',
 	confirm: {
 		label: 'SIM',
 		event: function() {
-			alert('callback ao clicar em sim');
+			alert('callback');
 		}
 	},
 	cancel: {
 		label: 'NÃO',
 		event: function() {
-			alert('callback ao clicar em não');
+			alert('callback');
 		}
 	}
 });
 ```
 
-```js
-dialog.confirm('Titulo do diálogo', 'Corpo do diálogo', function(){ console.log('confirmação') }, function(){ console.log('cancelar') });
-```
+## Contributing
+
+1. Fork it!
+2. Create a new branch
+3. Commit your changes
+4. Push to the branch
+5. Submit a pull request :D
+
+## License
+Licensed under the [MIT License](https://opensource.org/licenses/MIT).
