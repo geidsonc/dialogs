@@ -37,19 +37,19 @@ Include:
 ## Methods
 1. dialog.waiting('Message');
 
-2. dialog.confirm('Title', 'Message', function(){ `// confirm` }, function(){ `// cancel` });
+2. dialog.**confirm**('Title', 'Message', function(){ `// confirm` }, function(){ `// cancel` });
 
-3. dialog.prompt('Title', 'Message', 'Label', 'Selector', function(){ `// done` }, function(){ `// cancel` });
+3. dialog.**prompt**('Title', 'Message', 'Label', 'Selector', function(){ `// done` }, function(){ `// cancel` });
 
-4. dialog.modal('Title', 'Message', function(){ `...` });
+4. dialog.**modal**('Title', 'Message', function(){ `...` });
 
-5. dialog.info('Title', 'Message', function(){ `...` });
+5. dialog.**info**('Title', 'Message', function(){ `...` });
 
-6. dialog.help('Title', 'Message', { class: `...`, func: `...` });
+6. dialog.**help**('Title', 'Message', { class: `...`, func: `...` });
 
-7. dialog.menu('Title', [{ value: `...`, label: `...` }, `...` ], function(e){ `...` } );
+7. dialog.**menu**('Title', [{ value: `...`, label: `...` }, `...` ], function(e){ `...` } );
 
-8. dialog.close('Type');
+8. dialog.**close**('Type');
 
 ### Examples
 1. Info
