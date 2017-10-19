@@ -147,9 +147,7 @@ var dialog = null, d = null;
 			var html = '<div class="dialog z-depth-1" hidden>'+
 										'<div class="dialog-header">'+
 											'<div class="dialog-header-title">' + title + '</div>'+
-											'<div class="dialog-close">'+
-												'<img src="/dist/img/close.svg" alt="Close">'+
-											'</div>'+
+											'<div class="dialog-close"></div>'+
 										'</div>'+
 										'<div class="dialog-body"><ul class="dialog-menu"></ul></div>'+
 									'</div>';

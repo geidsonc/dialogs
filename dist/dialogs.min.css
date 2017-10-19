@@ -47,8 +47,47 @@
   flex-grow: 1;
 }
 .dialog .dialog-close {
-  display: -webkit-inline-box;
-  display: inline-flex;
+  display: block;
+  position: absolute;
+  padding: 15px;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+.dialog .dialog-close:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  height: 0;
+  border-top: 2px solid rgba(0,0,0,0.3);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+.dialog .dialog-close:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  height: 0;
+  border-top: 2px solid rgba(0,0,0,0.3);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
 }
 .dialog .dialog-body {
   padding: 20px 15px;
@@ -121,7 +160,7 @@
   padding: 0px;
 }
 .dialog .dialog-menu li {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   padding: 15px;
   border-radius: 3px;
   margin-bottom: 15px;

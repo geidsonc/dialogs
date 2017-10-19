@@ -42,7 +42,44 @@
 			flex-grow: 1
 
 	.dialog-close
-		display: inline-flex
+		// display: inline-flex
+		display: block
+		position: absolute
+		padding: 15px
+		right: 0
+		top: 0
+		width: 20px
+		height: 20px
+
+		&:before
+			content: ""
+			position: absolute
+			display: block
+			margin: auto
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			width: 20px
+			height: 0
+			border-top: 2px solid rgba(0,0,0,0.3)
+			transform: rotate(45deg)
+			transform-origin: center
+
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			margin: auto
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			width: 20px
+			height: 0
+			border-top: 2px solid rgba(0,0,0,0.3)
+			transform: rotate(-45deg)
+			transform-origin: center
 
 	.dialog-body
 		padding: 20px 15px
@@ -106,7 +143,7 @@
 		padding: 0px
 
 		li
-			border: 2px solid $bd-dark
+			border: 1px solid $bd-dark
 			padding: 15px
 			border-radius: 3px
 			margin-bottom: 15px
