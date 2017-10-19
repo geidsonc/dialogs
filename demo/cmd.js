@@ -1,24 +1,24 @@
 $(function() {
 	$('[name=info]').click(function() {
-		dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
-			alert('evento ao clicar em fechar');
+		dialog.info('Titulo do Diálogo', 'Corpo do Diálogo', function() {
+			alert('Callback ao clicar em fechar');
 		});
 	});
 
 	$('[name=confirm]').click(function() {
 		dialog.confirm({
-			title: 'Titulo do Alerta',
-			message: 'Corpo do alerta',
+			title: 'Titulo do diálogo',
+			message: 'Corpo do diálogo',
 			confirm: {
 				label: 'SIM',
 				event: function() {
-					alert('evento ao clicar em sim');
+					alert('Callback ao clicar em SIM');
 				}
 			},
 			cancel: {
 				label: 'NÃO',
 				event: function() {
-					alert('evento ao clicar em não');
+					alert('Callback ao clicar em NÃO');
 				}
 			}
 		});

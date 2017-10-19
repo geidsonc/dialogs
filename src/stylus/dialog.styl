@@ -1,0 +1,118 @@
+@import '_variables.styl'
+
+.noscroll
+	overflow: hidden
+
+.dialog-overlay
+	position: fixed
+	z-index: $zIndexOverlay
+	top: 0
+	left: 0
+	right: 0
+	height: 100%
+	background-color: alpha($backgroundColorOverlay, 0.5)
+	// opacity: 0.5;
+
+.dialog
+	width: 350px
+	font-family: $fontFamily
+	font-size: $fontSize
+	position: fixed
+	z-index: $zIndexDialog
+	background-color: $backgroundColor
+	border-radius: 4px
+	color: $fontColor
+	@media screen and (max-width: 480px)
+		width: 90%
+		position: fixed
+		z-index: $zIndexDialog
+		background-color: $backgroundColor
+		border-radius: 3px
+
+	.dialog-header
+		display: flex
+		padding: 15px
+		font-size: 0.875em
+		font-weight: 600
+		@media screen and (max-width: 480px)
+			font-size: 1.0em
+			border-bottom: 1px solid #eee
+
+		.dialog-header-title
+			flex-grow: 1
+
+	.dialog-close
+		display: inline-flex
+
+	.dialog-body
+		padding: 20px 15px
+		font-size: 0.875em
+		overflow-y: auto
+		@media screen and (max-width: 480px)
+			font-size: 1.0em
+			padding-bottom: 15px
+			padding-top: 15px
+
+	.dialog-footer
+		padding-top: 15px
+		display: flex
+		border: none
+		outline: 0px
+		font-size: 0.875em
+		@media screen and (max-width: 480px)
+			border-top: 1px solid #eee
+			padding-top: 0px
+
+		.dialog-footer button
+			font-size: 0.875em
+			color: $fontColor
+
+			&:hover, &:focus, &:active, &:click
+				border:none
+				-webkit-box-shadow:none
+				box-shadow:none
+				outline: 0
+				outline-offset: 0
+
+	.btn-flat.btn-block
+		margin-bottom: 0px
+		width: 100%
+
+	.btn-flat
+		width: 100%
+		background: transparent
+		font-weight: bold
+		border: none
+		outline: none
+		padding: 12px
+
+	&.dialog-help .dialog-header
+		top: 0
+		width: 100%
+
+	&.dialog-help .dialog-body
+		font-size: 1.0em
+		overflow-y: hidden
+		padding-top: 15px
+		padding-bottom: 15px
+
+	&.dialog-help,
+	&.dialog-full
+		width: 95%
+
+	.dialog-menu
+		list-style: none
+		margin: 0px
+		padding: 0px
+
+		li
+			border: 2px solid #8e8e8e
+			padding: 15px
+			border-radius: 3px
+			margin-bottom: 15px
+
+	.featured
+		text-align: center
+		margin-top: 7px
+		padding: 5px
+		border-radius: 4px

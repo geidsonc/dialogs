@@ -16,6 +16,20 @@ Simple and beautiful.
 bower install geidsonbc/dialogs --save
 ```
 
+or
+
+2. npm
+```sh
+npm install dialogsjs
+```
+
+or
+
+3. yarn
+```sh
+yarn add dialogsjs
+```
+
 ### Import
 
 Use:
@@ -27,27 +41,31 @@ Use:
 ### Methods
 1. Info
 ```js
-dialog.info('Titulo do Alerta', 'Corpo do alerta', function() {
-	alert('evento ao clicar em fechar');
+dialog.info('Titulo do diálogo', 'Corpo do diálogo', function() {
+	alert('callback ao clicar em fechar');
 });
 ```
 
 2. Confirm
 ```js
 dialog.confirm({
-	title: 'Titulo do Alerta',
-	message: 'Corpo do alerta',
+	title: 'Titulo do diálogo',
+	message: 'Corpo do diálogo',
 	confirm: {
 		label: 'SIM',
 		event: function() {
-			alert('evento ao clicar em sim');
+			alert('callback ao clicar em sim');
 		}
 	},
 	cancel: {
 		label: 'NÃO',
 		event: function() {
-			alert('evento ao clicar em não');
+			alert('callback ao clicar em não');
 		}
 	}
 });
+```
+
+```js
+dialog.confirm('Titulo do diálogo', 'Corpo do diálogo', function(){ console.log('confirmação') }, function(){ console.log('cancelar') });
 ```
