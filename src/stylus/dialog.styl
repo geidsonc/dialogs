@@ -5,28 +5,28 @@
 
 .dialog-overlay
 	position: fixed
-	z-index: $zIndexOverlay
+	z-index: $z-index-overlay
 	top: 0
 	left: 0
 	right: 0
 	height: 100%
-	background-color: alpha($backgroundColorOverlay, 0.5)
-	// opacity: 0.5;
+	background-color: alpha($background-color-overlay, 0.5)
+	// opacity: 0.5
 
 .dialog
 	width: 350px
-	font-family: $fontFamily
-	font-size: $fontSize
+	font-family: $font-family
+	font-size: $font-size
 	position: fixed
-	z-index: $zIndexDialog
-	background-color: $backgroundColor
+	z-index: $z-index-dialog
+	background-color: $background-color
 	border-radius: 4px
-	color: $fontColor
+	color: $font-color
 	@media screen and (max-width: 480px)
 		width: 90%
 		position: fixed
-		z-index: $zIndexDialog
-		background-color: $backgroundColor
+		z-index: $z-index-dialog
+		background-color: $background-color
 		border-radius: 3px
 
 	.dialog-header
@@ -36,7 +36,7 @@
 		font-weight: 600
 		@media screen and (max-width: 480px)
 			font-size: 1.0em
-			border-bottom: 1px solid #eee
+			border-bottom: 1px solid $bd-light
 
 		.dialog-header-title
 			flex-grow: 1
@@ -60,12 +60,12 @@
 		outline: 0px
 		font-size: 0.875em
 		@media screen and (max-width: 480px)
-			border-top: 1px solid #eee
+			border-top: 1px solid $bd-light
 			padding-top: 0px
 
 		.dialog-footer button
 			font-size: 0.875em
-			color: $fontColor
+			color: $font-color
 
 			&:hover, &:focus, &:active, &:click
 				border:none
@@ -106,7 +106,7 @@
 		padding: 0px
 
 		li
-			border: 2px solid #8e8e8e
+			border: 2px solid $bd-dark
 			padding: 15px
 			border-radius: 3px
 			margin-bottom: 15px
