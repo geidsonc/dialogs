@@ -20,13 +20,9 @@
   border-radius: 4px;
   color: #333;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
   .dialog {
     width: 90%;
-    position: fixed;
-    z-index: 1061;
-    background-color: #fff;
-    border-radius: 3px;
   }
 }
 .dialog .dialog-header {
@@ -35,12 +31,6 @@
   padding: 15px;
   font-size: 0.875em;
   font-weight: 600;
-}
-@media screen and (max-width: 480px) {
-  .dialog .dialog-header {
-    font-size: 1em;
-    border-bottom: 1px solid #eee;
-  }
 }
 .dialog .dialog-header .dialog-header-title {
   -webkit-box-flex: 1;
@@ -66,7 +56,7 @@
   bottom: 0;
   width: 20px;
   height: 0;
-  border-top: 2px solid rgba(0,0,0,0.3);
+  border-top: 2px solid rgba(0,0,0,0.4);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transform-origin: center;
@@ -83,7 +73,7 @@
   bottom: 0;
   width: 20px;
   height: 0;
-  border-top: 2px solid rgba(0,0,0,0.3);
+  border-top: 2px solid rgba(0,0,0,0.4);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transform-origin: center;
@@ -94,13 +84,6 @@
   font-size: 0.875em;
   overflow-y: auto;
 }
-@media screen and (max-width: 480px) {
-  .dialog .dialog-body {
-    font-size: 1em;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-}
 .dialog .dialog-footer {
   padding-top: 15px;
   display: -webkit-box;
@@ -108,16 +91,6 @@
   border: none;
   outline: 0px;
   font-size: 0.875em;
-}
-@media screen and (max-width: 480px) {
-  .dialog .dialog-footer {
-    border-top: 1px solid #eee;
-    padding-top: 0px;
-  }
-}
-.dialog .dialog-footer .dialog-footer button {
-  font-size: 0.875em;
-  color: #333;
 }
 .dialog .dialog-footer .dialog-footer button:hover,
 .dialog .dialog-footer .dialog-footer button:focus,
@@ -134,6 +107,8 @@
 }
 .dialog .btn-flat {
   width: 100%;
+  font-size: 0.9375em;
+  color: #333;
   background: transparent;
   font-weight: bold;
   border: none;
@@ -145,10 +120,7 @@
   width: 100%;
 }
 .dialog.dialog-help .dialog-body {
-  font-size: 1em;
   overflow-y: hidden;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 .dialog.dialog-help,
 .dialog.dialog-full {
