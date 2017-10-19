@@ -35,7 +35,7 @@ Include:
 ```
 
 ## Methods
-1. dialog.waiting('Message');
+1. dialog.**waiting**('Message');
 
 2. dialog.**confirm**('Title', 'Message', function(){ `// confirm` }, function(){ `// cancel` });
 
