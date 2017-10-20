@@ -2,7 +2,7 @@ var dialog = null, d = null;
 (function() {
 	var dialog_tmp = function() {
 
-		/*Diálogo de espera*/
+		/* Diálogo de waiting */
 		this.waiting = function(m) {
 			var html = '<div class="dialog z-depth-1 dialog-waiting" hidden>'+
 					'<div class="dialog-body text-center text-sm">' + m + '</div>'+
@@ -10,9 +10,7 @@ var dialog = null, d = null;
 			var modal = this.open(html);
 		};
 
-		/*Diálogo de confirmação
-		 executa uma função.
-		*/
+		/* Diálogo de confirm */
 		this.confirm = function(title, message, confirm, cancel) {
 			var data = { confirm: {}, cancel: {} };
 			data.title = title;
@@ -61,11 +59,11 @@ var dialog = null, d = null;
 			func2 = func2 || "";
 			var html = '<div class="dialog z-depth-1" hidden>'+
 					'<div class="dialog-header">' + title + '</div>'+
-					'<div class="dialog-body">' + m +
-						'<br><br>'+
+					'<div class="dialog-body">' + m + '<br>'+
 						'<label>' + label + '</label>'+
 					'<div class="form-group">'+
-						'<input	class="' + selector + '" name="' + selector + '" autofocus type="text"></form-group>'+
+						'<input	type="text" class="' + selector + '" name="' + selector + '" autofocus>'+
+					'</div>'+
 					'</div>'+
 					'<div class="dialog-footer">'+
 						'<button class="btn-flat dialog-cancel waves-effect">CANCELAR</button>'+
@@ -104,7 +102,7 @@ var dialog = null, d = null;
 
 		};
 
-		/*Diálogo de informação*/
+		/* Diálogo de info */
 		this.info = function(title, m, func) {
 			func = func || "";
 			var html = '<div class="dialog dialog-info z-depth-1">';
@@ -123,7 +121,7 @@ var dialog = null, d = null;
 			});
 		};
 
-		/*Diálogo de help*/
+		/* Diálogo de help */
 		this.help = function(title, m, obj) {
 			obj = obj || {};
 			var html = '<div class="dialog dialog-help z-depth-1 '+ (obj.class || '') +'">'+
@@ -131,7 +129,7 @@ var dialog = null, d = null;
 									'<div class="dialog-header">' + title + '</div>'+
 									'<div class="dialog-body dialog-body-help">' + m + '</div>'+
 									'<div class="dialog-footer">'+
-										'<button class="btn-block dialog-cancel waves-effect">FECHAR</button>'+
+										'<button class="btn-block btn-flat dialog-cancel waves-effect">FECHAR</button>'+
 									'</div>'+
 								'</div>'+
 							'</div>';
@@ -147,9 +145,7 @@ var dialog = null, d = null;
 			var html = '<div class="dialog z-depth-1" hidden>'+
 										'<div class="dialog-header">'+
 											'<div class="dialog-header-title">' + title + '</div>'+
-											'<div class="dialog-close">'+
-												'<img src="/dist/img/close.svg" alt="Close">'+
-											'</div>'+
+											'<div class="dialog-close"></div>'+
 										'</div>'+
 										'<div class="dialog-body"><ul class="dialog-menu"></ul></div>'+
 									'</div>';
@@ -177,7 +173,7 @@ var dialog = null, d = null;
 			}
 			this.position();
 		};
-		/*Coloca o diálogo no final do Body e show().*/
+		/* Coloca o diálogo no final do body e show() */
 		this.open = function(html) {
 			html = $(html);
 			$("body").append(html);

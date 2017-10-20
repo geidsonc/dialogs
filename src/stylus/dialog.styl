@@ -5,53 +5,79 @@
 
 .dialog-overlay
 	position: fixed
-	z-index: $zIndexOverlay
+	z-index: $z-index-overlay
 	top: 0
 	left: 0
 	right: 0
 	height: 100%
-	background-color: alpha($backgroundColorOverlay, 0.5)
-	// opacity: 0.5;
+	background-color: alpha($background-color-overlay, 0.5)
+	// opacity: 0.5
 
 .dialog
 	width: 350px
-	font-family: $fontFamily
-	font-size: $fontSize
+	font-family: $font-family
+	font-size: $font-size
 	position: fixed
-	z-index: $zIndexDialog
-	background-color: $backgroundColor
+	z-index: $z-index-dialog
+	background-color: $background-color
 	border-radius: 4px
-	color: $fontColor
-	@media screen and (max-width: 480px)
+	color: $font-color
+	@media screen and (max-width: 450px)
 		width: 90%
-		position: fixed
-		z-index: $zIndexDialog
-		background-color: $backgroundColor
-		border-radius: 3px
 
 	.dialog-header
 		display: flex
 		padding: 15px
 		font-size: 0.875em
 		font-weight: 600
-		@media screen and (max-width: 480px)
-			font-size: 1.0em
-			border-bottom: 1px solid #eee
 
 		.dialog-header-title
 			flex-grow: 1
 
 	.dialog-close
-		display: inline-flex
+		// display: inline-flex
+		display: block
+		position: absolute
+		padding: 15px
+		right: 0
+		top: 0
+		width: 20px
+		height: 20px
+
+		&:before
+			content: ""
+			position: absolute
+			display: block
+			margin: auto
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			width: 20px
+			height: 0
+			border-top: 2px solid rgba(0,0,0,0.4)
+			transform: rotate(45deg)
+			transform-origin: center
+
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			margin: auto
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			width: 20px
+			height: 0
+			border-top: 2px solid rgba(0,0,0,0.4)
+			transform: rotate(-45deg)
+			transform-origin: center
 
 	.dialog-body
 		padding: 20px 15px
 		font-size: 0.875em
 		overflow-y: auto
-		@media screen and (max-width: 480px)
-			font-size: 1.0em
-			padding-bottom: 15px
-			padding-top: 15px
 
 	.dialog-footer
 		padding-top: 15px
@@ -59,14 +85,8 @@
 		border: none
 		outline: 0px
 		font-size: 0.875em
-		@media screen and (max-width: 480px)
-			border-top: 1px solid #eee
-			padding-top: 0px
 
 		.dialog-footer button
-			font-size: 0.875em
-			color: $fontColor
-
 			&:hover, &:focus, &:active, &:click
 				border:none
 				-webkit-box-shadow:none
@@ -80,6 +100,8 @@
 
 	.btn-flat
 		width: 100%
+		font-size: 0.9375em // 15px
+		color: $font-color
 		background: transparent
 		font-weight: bold
 		border: none
@@ -91,10 +113,7 @@
 		width: 100%
 
 	&.dialog-help .dialog-body
-		font-size: 1.0em
 		overflow-y: hidden
-		padding-top: 15px
-		padding-bottom: 15px
 
 	&.dialog-help,
 	&.dialog-full
@@ -106,13 +125,7 @@
 		padding: 0px
 
 		li
-			border: 2px solid #8e8e8e
+			border: 1px solid $bd-dark
 			padding: 15px
-			border-radius: 3px
+			border-radius: 4px
 			margin-bottom: 15px
-
-	.featured
-		text-align: center
-		margin-top: 7px
-		padding: 5px
-		border-radius: 4px
