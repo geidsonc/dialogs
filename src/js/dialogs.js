@@ -24,7 +24,9 @@ var dialog = null, d = null;
 				data = $.extend(true, data, title);
 			}
 
-			var html = '<div class="dialog z-depth-1 '+data.class+'" hidden><div class="dialog-content">';
+			if(data.full) data.class += ' dialog-full';
+
+			var html = '<div class="dialog dialog-confirm z-depth-1 '+data.class+'" hidden><div class="dialog-content">';
 			if(data.title !== "") {
 				html += '<div class="dialog-header">' + data.title + '</div>';
 			}
