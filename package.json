@@ -3,16 +3,28 @@
 	"description": "Diálogos para web. Alerta, confirmações, aguardando, menu, etc.",
 	"readmeFileName": "README.md",
 	"keywords": [
-		"dialog", "alert", "web", "messages", "confirm", "jquery", "dialogs"
+		"dialog",
+		"alert",
+		"web",
+		"messages",
+		"confirm",
+		"jquery",
+		"dialogs"
 	],
-	"version": "v0.1.7",
+	"version": "0.1.8",
 	"author": {
 		"name": "Geidson Benício Coelho",
 		"email": "geidsonc@gmail.com"
 	},
 	"contributors": [
-		{ "name": "Denisson Leal", "email": "denissonleal@gmail.com" },
-		{ "name": "Leandrow", "email": "leandrow01s@gmail.com" }
+		{
+			"name": "Denisson Leal",
+			"email": "denissonleal@gmail.com"
+		},
+		{
+			"name": "Leandrow",
+			"email": "leandrow01s@gmail.com"
+		}
 	],
 	"scripts": {
 		"prod": "gulp --production",
@@ -32,6 +44,7 @@
 		"laravel-elixir-stylus": "^2.0.3"
 	},
 	"dependencies": {
+		"npm": "^6.0.0"
 	},
 	"license": "MIT"
 }

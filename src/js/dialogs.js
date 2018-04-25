@@ -4,7 +4,7 @@ var dialog = null, d = null;
 
 		/* Diálogo de waiting */
 		this.waiting = function(m) {
-			var html = '<div class="dialog z-depth-1 dialog-waiting" hidden>'+
+			var html = '<div class="dialog z-depth-1 dialog-waiting">'+
 					'<div class="dialog-body text-center text-sm">' + m + '</div>'+
 				'</div>';
 			var modal = this.open(html);
@@ -26,7 +26,7 @@ var dialog = null, d = null;
 
 			if(data.full) data.class += ' dialog-full';
 
-			var html = '<div class="dialog dialog-confirm z-depth-1 '+data.class+'" hidden><div class="dialog-content">';
+			var html = '<div class="dialog dialog-confirm z-depth-1 '+data.class+'"><div class="dialog-content">';
 			if(data.title !== "") {
 				html += '<div class="dialog-header">' + data.title + '</div>';
 			}
@@ -59,7 +59,7 @@ var dialog = null, d = null;
 		this.prompt = function(title, m, label, selector, func1, func2) {
 			func1 = func1 || "";
 			func2 = func2 || "";
-			var html = '<div class="dialog z-depth-1" hidden>'+
+			var html = '<div class="dialog z-depth-1">'+
 					'<div class="dialog-header">' + title + '</div>'+
 					'<div class="dialog-body">' + m + '<br>'+
 						'<label>' + label + '</label>'+
@@ -88,7 +88,7 @@ var dialog = null, d = null;
 
 		this.modal = function(title, m, func) {
 			func = func || "";
-			var html = '<div class="dialog z-depth-1" hidden>'+
+			var html = '<div class="dialog dialog-full z-depth-1">'+
 					'<div class="dialog-header">' + title + '</div>'+
 						'<div class="dialog-body">' + m + '</div>'+
 						'<div class="dialog-footer">'+
@@ -144,7 +144,7 @@ var dialog = null, d = null;
 
 		this.menu = function(title, obj, event) {
 
-			var html = '<div class="dialog z-depth-1" hidden>'+
+			var html = '<div class="dialog z-depth-1">'+
 										'<div class="dialog-header">'+
 											'<div class="dialog-header-title">' + title + '</div>'+
 											'<div class="dialog-close"></div>'+
