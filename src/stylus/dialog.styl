@@ -29,7 +29,7 @@
 	display: none
 
 	&.dialog-full
-		width: calc(100% - 30px);
+		width: calc(100% - 30px)
 	@media screen and (max-width: 450px)
 		width: 90%
 
@@ -95,16 +95,17 @@
 		font-size: 0.875em
 
 		.dialog-footer button
-			&:hover, &:focus, &:active, &:click
+			&:hover, &:focus, &:active
 				border:none
 				-webkit-box-shadow:none
 				box-shadow:none
 				outline: 0
 				outline-offset: 0
 
-	.btn-flat.btn-block
-		margin-bottom: 0px
-		width: 100%
+	.btn-flat
+		&.btn-block
+			margin-bottom: 0px
+			width: 100%
 
 	.btn-flat
 		width: 100%
@@ -115,6 +116,7 @@
 		border: none
 		outline: none
 		padding: 12px
+		cursor: pointer
 
 	&.dialog-help .dialog-header
 		top: 0
@@ -131,7 +133,6 @@
 		list-style: none
 		margin: 0px
 		padding: 0px
-
 		li
 			border: 1px solid $bd-dark
 			padding: 15px
