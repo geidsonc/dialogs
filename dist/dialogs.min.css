@@ -122,6 +122,9 @@
   padding: 12px;
   cursor: pointer;
 }
+.dialog .btn-flat[disabled] {
+  color: #999;
+}
 .dialog.dialog-help .dialog-header {
   top: 0;
   width: 100%;
