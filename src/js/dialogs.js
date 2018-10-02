@@ -11,10 +11,10 @@ var dialog = null, d = null;
 		};
 
 		/* Diálogo de confirm */
-		this.confirm = function(title, message, confirm, cancel) {
+		this.confirm = function(title, message, confirm, cancel, classes) {
 			var data = { confirm: {}, cancel: {} };
 			data.title = title;
-			data.class = '';
+			data.class = classes || '';
 			data.message = message;
 			data.confirm.event = confirm || "";
 			data.cancel.event = cancel || "";
@@ -22,6 +22,8 @@ var dialog = null, d = null;
 			data.confirm.label = "OK";
 			if(typeof title == "object") {
 				data = $.extend(true, data, title);
+				data.class = data.classes || '';
+				delete(data.classes);
 			}
 
 			if(data.full) data.class += ' dialog-full';
@@ -56,10 +58,10 @@ var dialog = null, d = null;
 			});
 		};
 
-		this.prompt = function(title, m, label, selector, func1, func2) {
+		this.prompt = function(title, m, label, selector, func1, func2, classes) {
 			func1 = func1 || "";
 			func2 = func2 || "";
-			var html = '<div class="dialog z-depth-1">'+
+			var html = '<div class="dialog ' + (classes || '') + ' z-depth-1">'+
 					'<div class="dialog-header">' + title + '</div>'+
 					'<div class="dialog-body">' + m + '<br>'+
 						'<label>' + label + '</label>'+
@@ -105,9 +107,9 @@ var dialog = null, d = null;
 		};
 
 		/* Diálogo de info */
-		this.info = function(title, m, func) {
+		this.info = function(title, m, func, classes) {
 			func = func || "";
-			var html = '<div class="dialog dialog-info z-depth-1">';
+			var html = '<div class="dialog ' + (classes || '') + ' dialog-info z-depth-1">';
 			if(title !== "") {
 				html += '<div class="dialog-header">' + title + '</div>';
 			}
@@ -142,9 +144,8 @@ var dialog = null, d = null;
 			});
 		};
 
-		this.menu = function(title, obj, event) {
-
-			var html = '<div class="dialog z-depth-1">'+
+		this.menu = function(title, obj, event, classes) {
+			var html = '<div class="dialog ' + (classes || '') + ' z-depth-1">'+
 										'<div class="dialog-header">'+
 											'<div class="dialog-header-title">' + title + '</div>'+
 											'<div class="dialog-close"></div>'+
