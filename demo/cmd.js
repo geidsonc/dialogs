@@ -23,4 +23,26 @@ $(function() {
 			}
 		});
 	});
+
+	$('[name="menu"]').click(function () {
+		dialog.menu('Title',
+			[
+				{
+					value: '1',
+					label: 'Opção 1'
+				},
+
+				{
+					value: '2',
+					label: 'Opção 2'
+				}
+			],
+
+			function (e) {
+				var value = $(e.currentTarget).data('value');
+
+				alert("Callback ao clicar na opção de valor " + value);
+			}
+		);
+	});
 });
